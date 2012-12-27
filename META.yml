@@ -1,0 +1,32 @@
+---
+abstract: 'execute PHP script as CGI'
+author:
+  - 'Masahiro Nagano <kazeburo {at} gmail.com>'
+build_requires:
+  ExtUtils::MakeMaker: 6.36
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.36
+distribution_type: module
+dynamic_config: 1
+generated_by: 'Module::Install version 1.06'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Plack-App-PHPCGI
+no_index:
+  directory:
+    - inc
+    - t
+    - xt
+requires:
+  CGI::Emulate::PSGI: 0.15
+  File::Spec: 0
+  File::Which: 0
+  Plack: 1.0013
+  parent: 0
+resources:
+  license: http://dev.perl.org/licenses/
+  repository: git://github.com/kazeburo/Plack-App-PHPCGI.git
+version: 0.01
