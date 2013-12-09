@@ -3,13 +3,13 @@ abstract: 'execute PHP script as CGI'
 author:
   - 'Masahiro Nagano <kazeburo {at} gmail.com>'
 build_requires:
-  ExtUtils::MakeMaker: 6.36
   Test::More: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.36
-distribution_type: module
-dynamic_config: 1
-generated_by: 'Module::Install version 1.06'
+  CPAN::Meta: 0
+  CPAN::Meta::Prereqs: 0
+  Module::Build: 0.38
+dynamic_config: 0
+generated_by: 'Minilla/v0.8.4, CPAN::Meta::Converter version 2.132830'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -17,9 +17,21 @@ meta-spec:
 name: Plack-App-PHPCGI
 no_index:
   directory:
-    - inc
     - t
     - xt
+    - inc
+    - share
+    - eg
+    - examples
+    - author
+    - builder
+provides:
+  Plack::App::PHPCGI:
+    file: lib/Plack/App/PHPCGI.pm
+    version: 0.04
+  Plack::App::PHPCGIFile:
+    file: lib/Plack/App/PHPCGIFile.pm
+    version: 0.04
 requires:
   CGI::Emulate::PSGI: 0.15
   File::Spec: 0
@@ -27,6 +39,9 @@ requires:
   Plack: 1.0013
   parent: 0
 resources:
-  license: http://dev.perl.org/licenses/
+  bugtracker: https://github.com/kazeburo/Plack-App-PHPCGI/issues
+  homepage: https://github.com/kazeburo/Plack-App-PHPCGI
   repository: git://github.com/kazeburo/Plack-App-PHPCGI.git
-version: 0.03
+version: 0.04
+x_contributors:
+  - 'Masahiro Nagano <kazeburo@gmail.com>'
